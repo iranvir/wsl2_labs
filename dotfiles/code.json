@@ -1,0 +1,51 @@
+{
+    "[yaml]": {
+        "editor.autoIndent": "advanced",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+        },
+    "[css]": {
+        "editor.autoIndent": "advanced",
+        "editor.insertSpaces": false,
+        "editor.tabSize": 4
+        },
+    "[html]": {
+        "editor.autoIndent": "advanced",
+        "editor.insertSpaces": false,
+        "editor.tabSize": 4
+        },
+    "[markdown]": {
+        "editor.wordWrap": "off"
+        },
+    "extensions.ignoreRecommendations": true,
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.enabled": false,
+    "editor.tabCompletion": "on",
+    "editor.wordBasedSuggestions": "matchingDocuments",
+    "editor.detectIndentation": false,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.drawBoldTextInBrightColors": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontSize": 16,
+    "explorer.confirmDelete": false,
+    "telemetry.telemetryLevel": "off",
+    "workbench.editor.enablePreview": false,
+    "editor.minimap.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "update.showReleaseNotes": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.editor.empty.hint": "hidden",
+    "git.enabled": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "window.restoreFullscreen": true,
+    "window.restoreWindows": "none",
+    "scm.autoReveal": false,
+    "chat.disableAIFeatures": true,
+    "chat.titleBar.signIn.enabled": false,
+    "chat.titleBar.openInAgentsWindow.enabled": false,
+    "chat.agentsControl.enabled": "hidden",
+    "editor.fontSize": 16
+}
