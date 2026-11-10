@@ -50,8 +50,8 @@ enabled=true
 mountFsTab=false
 EOF
 
-rm -rf /bin.usr-is-merged /lib.usr-is-merged /sbin.usr-is-merged \
-    /etc/resolv.conf /etc/cloud /etc/profile* /etc/bash* /etc/skel /etc/rc* /etc/sudoers.d /etc/python* /etc/update-motd* /etc/ubuntu-advantage \
-    /var/lib/cloud /usr/lib/python3/dist-packages /var/lib/command-not-found
+# rm -rf /bin.usr-is-merged /lib.usr-is-merged /sbin.usr-is-merged \
+#     /etc/resolv.conf /etc/cloud /etc/profile* /etc/bash* /etc/skel /etc/rc* /etc/sudoers.d /etc/python* /etc/update-motd* /etc/ubuntu-advantage \
+#     /var/lib/cloud /usr/lib/python3/dist-packages /var/lib/command-not-found
 
 exit 0
