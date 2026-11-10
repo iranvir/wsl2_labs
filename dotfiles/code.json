@@ -29,6 +29,7 @@
     "terminal.integrated.drawBoldTextInBrightColors": false,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontSize": 16,
+    "terminal.integrated.initialHint": false,
     "explorer.confirmDelete": false,
     "telemetry.telemetryLevel": "off",
     "workbench.editor.enablePreview": false,
