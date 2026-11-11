@@ -18,16 +18,17 @@ fi
 
 if [ "${ID}" = 'fedora' ] ; then
     dnf update --assumeyes --quiet
-    dnf install coreutils systemd ncurses procps-ng openssh-clients vim sudo which tmux rsync git glibc-langpack-en iputils --allowerasing --assumeyes --quiet
+    dnf install coreutils systemd ncurses procps-ng openssh-clients vim sudo which tmux rsync git glibc-langpack-en iputils fontconfig dejavu-sans-fonts default-fonts-core --allowerasing --assumeyes --quiet
     dnf install htop hwloc --assumeyes --quiet
     dnf clean all --assumeyes --quiet
     systemctl disable --now systemd-resolved
+    fc-cache -fv
 fi
 
 if [ "${ID}" = 'ubuntu' ] ; then
     apt-get update --quiet --yes
     apt-get upgrade --quiet --yes
-    apt-get purge show-motd update-motd snapd openssh-client openssh-server cloud-init git python3 systemd-resolved --quiet --yes
+    apt-get purge show-motd update-motd snapd openssh-client openssh-server cloud-init git python3 systemd-resolved fontconfig fonts-dejavu-core fonts-liberation --quiet --yes
     apt-get autoremove --purge --quiet --yes
 fi
 
