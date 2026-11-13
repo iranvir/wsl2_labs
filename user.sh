@@ -20,4 +20,6 @@ chmod 400 "${HOME}"/.ssh/id_ed25519 "${HOME}"/.ssh/id_ed25519.pub
 chmod 600 "${HOME}"/.ssh/config
 rm -f "${HOME}"/.ssh/known_hosts*
 
+# Remove .bashrc and other rc files that I don't use
+rm ~/.bashrc ~/.bash_profile ~/.cshrc ~/.tcshrc
 exit 0
