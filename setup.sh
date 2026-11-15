@@ -11,7 +11,7 @@ fi
 
 if [ "${ID}" = 'rocky' ] ; then
     dnf update --assumeyes --quiet
-    dnf install coreutils systemd ncurses procps-ng openssh-clients vim sudo which tmux rsync git glibc-langpack-en iputils dnf-plugins-core --allowerasing --assumeyes --quiet
+    dnf install coreutils systemd ncurses procps-ng openssh-clients vim sudo which tmux rsync git glibc-langpack-en iputils dnf-plugins-core fontconfig dejavu-sans-fonts default-fonts-core --allowerasing --assumeyes --quiet
     dnf config-manager --enable crb
     dnf clean all --assumeyes --quiet
 fi
@@ -22,7 +22,7 @@ if [ "${ID}" = 'fedora' ] ; then
     dnf install htop hwloc --assumeyes --quiet
     dnf clean all --assumeyes --quiet
     systemctl disable --now systemd-resolved
-    fc-cache -fv
+    rm resolv.conf
 fi
 
 if [ "${ID}" = 'ubuntu' ] ; then
