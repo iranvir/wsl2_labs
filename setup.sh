@@ -37,6 +37,7 @@ if [ "${ID}" = 'debian' ] ; then
     apt-get upgrade --quiet --yes
     apt-get purge show-motd update-motd snapd openssh-client openssh-server cloud-init git python3 systemd-resolved --quiet --yes
     apt-get autoremove --purge --quiet --yes
+    rm -f /etc/resolv.conf
 fi
 
 cat << EOF > /etc/wsl.conf
@@ -54,5 +55,6 @@ EOF
 # rm -rf /bin.usr-is-merged /lib.usr-is-merged /sbin.usr-is-merged \
 #     /etc/resolv.conf /etc/cloud /etc/profile* /etc/bash* /etc/skel /etc/rc* /etc/sudoers.d /etc/python* /etc/update-motd* /etc/ubuntu-advantage \
 #     /var/lib/cloud /usr/lib/python3/dist-packages /var/lib/command-not-found
+
 
 exit 0
