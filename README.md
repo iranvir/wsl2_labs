@@ -80,4 +80,6 @@ email.
 
 # Future Plans
 1. Will whip up a script to take a snapshot of a distro and back it up.
-2. Clean up wsl-distribution.conf and /usr/share/wsl, /usr/libexec/oobe.sh and other artifactes for Distos Ubuntu and Febdora which are being imported directly from a .wsl file
+2. Clean up wsl-distribution.conf and /usr/share/wsl, /usr/libexec/oobe.sh and
+   other artifactes for Distos Ubuntu and Febdora which are being imported
+   directly from a .wsl file
