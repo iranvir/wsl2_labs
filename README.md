@@ -1,10 +1,13 @@
 # WSL 2 Labs
 > [!WARNING] 
-> 1. `user.sh` has `rm -rf ` in it. If it runs amok, all your drives C:\ D:\ E:\ 
-> ... will be wiped. Yes, it will totally nuke your Windows
-> Host (speaking from experience). You have been warned. If unsure, remove lines 3...6 from `.\user.sh`.
-> 2. Ubuntu 24.04 is slow to setup and freezes my entire computer... but it eventually works™.
-> 3. Tested this script for `WSL version: 2.0.14.0` running `Windows 11 23H2` on `x86_64` platform using the following:
+> 1. `user.sh` has `rm -rf ` in it. If it runs amok, all your drives C:\ D:\ E:\
+> ... will be wiped. Yes, it will totally nuke your Windows Host (speaking from
+> experience). You have been warned. If unsure, remove lines 3...6 from
+> `.\user.sh`.
+> 2. Ubuntu 24.04 is slow to setup and freezes my entire computer... but it
+>    eventually works™.
+> 3. Tested this script for `WSL version: 2.0.14.0` running `Windows 11 23H2` on
+>    `x86_64` platform using the following:
 >       * PowerShell version 7.4.2 on Windows Host
 >       * Ubuntu 22.04 and 24.04
 >       * Alpine Linux 3.19
@@ -36,7 +39,7 @@ email.
 2. Download the rootfs of the operating system you want, or if you cannot find
    the rootfs try using [this `docker export`
    method](https://learn.microsoft.com/en-us/windows/wsl/use-custom-distro) to
-   generate it
+   generate it. Download the .wsl files for Ubuntu 26.04 and Fedora 45 and rename them to .tar. files
 
 3. Create a `rootfs/` directory at the root of this repo and put the compressed
    rootfs in there.
@@ -77,3 +80,4 @@ email.
 
 # Future Plans
 1. Will whip up a script to take a snapshot of a distro and back it up.
+2. Clean up wsl-distribution.conf and /usr/share/wsl, /usr/libexec/oobe.sh and other artifactes for Distos Ubuntu and Febdora which are being imported directly from a .wsl file

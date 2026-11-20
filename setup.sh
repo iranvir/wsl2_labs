@@ -18,11 +18,11 @@ fi
 
 if [ "${ID}" = 'fedora' ] ; then
     dnf update --assumeyes --quiet
-    dnf install coreutils systemd ncurses procps-ng openssh-clients vim sudo which tmux rsync git glibc-langpack-en iputils fontconfig dejavu-sans-fonts default-fonts-core --allowerasing --assumeyes --quiet
+    dnf install coreutils systemd ncurses procps-ng openssh-clients vim sudo which tmux rsync git-core glibc-langpack-en iputils fontconfig dejavu-sans-fonts default-fonts-core --allowerasing --assumeyes --quiet
     dnf install htop hwloc --assumeyes --quiet
     dnf clean all --assumeyes --quiet
     systemctl disable --now systemd-resolved
-    rm resolv.conf
+    rm -f /etc/resolv.conf
 fi
 
 if [ "${ID}" = 'ubuntu' ] ; then
