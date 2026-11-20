@@ -21,5 +21,5 @@ chmod 600 "${HOME}"/.ssh/config
 rm -f "${HOME}"/.ssh/known_hosts*
 
 # Remove .bashrc and other rc files that I don't use
-rm ~/.bashrc ~/.bash_profile ~/.cshrc ~/.tcshrc
+rm -f ~/.bashrc ~/.bash_profile ~/.cshrc ~/.tcshrc
 exit 0

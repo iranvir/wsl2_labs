@@ -19,6 +19,7 @@ if(!(Test-Path -PathType Container C:\sw\WSL2))
 # OS setup
 wsl.exe --import $Name C:\sw\WSL2\$Name $Rootfs
 wsl.exe --distribution $Name ./setup.sh
+wsl.exe --shutdown
 if ( $EnableSystemd -And !($IsAlpine))
 {
     wsl.exe --user root --distribution $Name printf '[boot]\\nsystemd=true\\n' `>`> /etc/wsl.conf
