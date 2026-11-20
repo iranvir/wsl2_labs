@@ -9,15 +9,15 @@
     "editor.insertSpaces": false,
     "editor.tabSize": 2
   },
-  "[json]": {
-    "editor.autoIndent": "advanced",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2
-  }
   "[markdown]": {
     "editor.wordWrap": "off"
   },
   "[yaml]": {
+    "editor.autoIndent": "advanced",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[json]": {
     "editor.autoIndent": "advanced",
     "editor.insertSpaces": true,
     "editor.tabSize": 2
@@ -38,6 +38,8 @@
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "git.enabled": false,
+  "rewrap.autoWrap.enabled": true,
+  "rewrap.wrappingColumn": 80,
   "scm.autoReveal": false,
   "security.workspace.trust.enabled": false,
   "telemetry.telemetryLevel": "off",
@@ -47,12 +49,12 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.initialHint": false,
   "update.showReleaseNotes": false,
+  "workbench.activityBar.location": "hidden",
   "window.commandCenter": false,
   "window.restoreFullscreen": true,
   "window.restoreWindows": "none",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreview": false,
   "workbench.layoutControl.enabled": false,
-  "workbench.startupEditor": "none",
-  "workbench.activityBar.location": "hidden"
+  "workbench.startupEditor": "none"
 }
