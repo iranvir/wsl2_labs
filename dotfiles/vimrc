@@ -1,3 +1,6 @@
 syntax on
 set shortmess=I
 set viminfofile=NONE
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_EI.="\e[5 q" "EI = NORMAL mode
+let &t_SR.="\e[5 q" "SR = REPLACE mode
