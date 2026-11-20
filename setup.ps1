@@ -19,12 +19,14 @@ if(!(Test-Path -PathType Container C:\sw\WSL2))
 # OS setup
 wsl.exe --import $Name C:\sw\WSL2\$Name $Rootfs
 wsl.exe --distribution $Name ./setup.sh
-wsl.exe --shutdown
+wsl.exe --terminate $Name
 if ( $EnableSystemd -And !($IsAlpine))
 {
     wsl.exe --user root --distribution $Name printf '[boot]\\nsystemd=true\\n' `>`> /etc/wsl.conf
 }
-wsl.exe --shutdown
+wsl.exe --terminate $Name
+wsl.exe --user root --distribution $Name rm -f /etc/resolv.conf
+wsl.exe --user root --distribution $Name rm /etc/resolv.conf
 wsl.exe --user root --distribution $Name printf 'nameserver 1.1.1.1\\nnameserver 1.0.0.1\\n' `> /etc/resolv.conf
 
 # User setup
@@ -45,7 +47,7 @@ wsl.exe --distribution $Name --user $UserName ./user.sh
 
 # Reduce space consumption
 wsl.exe --distribution $Name --user root fstrim /
-wsl.exe --shutdown
+wsl.exe --terminate $Name
 wsl.exe --export $Name C:\sw\WSL2\$Name\$Name.tar
 wsl.exe --unregister $Name
 wsl.exe --import $Name C:\sw\WSL2\$Name C:\sw\WSL2\$Name\$Name.tar
